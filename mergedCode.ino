@@ -265,6 +265,7 @@ void GetPulse()
     sum+= analogRead(A0);
   }
   pulse = sum/100.0;
+  Serial.println(pulse);
   pulse = abs(pulse);
   pulse = min(114.6, pulse);
   pulse = max(57.2, pulse);
